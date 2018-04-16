@@ -23,6 +23,21 @@ void BST::setHelper(Node *current, int value)
   }
 }
 
+void BST::print()
+{
+    printHelper(root);
+    cout << endl;
+}
+
+void BST::printHelper(Node *current)
+{
+    if(current != NULL) {
+    printHelper(current->left);
+    cout << current->data << " ";
+    printHelper(current->right);
+  }
+}
+
 BST::~BST()
 {
     //dtor
